@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="火山引擎短漫剧组 - 创意无限，短漫精彩" />
+    <meta name="keywords" content="短漫, 火山引擎, 创意, 动画, 漫画, 剧组" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <title>火山短漫 - 创意无限，短漫精彩</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#">
+              <i class="fas fa-fire"></i>
+              <span>火山短漫</span>
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#works">代表作</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#contact">联系我们</a></li>
+          </ul>
+          <div class="nav-actions">
+            <button class="btn btn-outline">加入我们</button>
+            <button class="btn btn-primary">合作咨询</button>
+          </div>
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              <span class="hero-title-primary">火山短漫</span>
+              <span class="hero-title-secondary">创意无限，短漫精彩</span>
+            </h1>
+            <p class="hero-description">
+              我们是一支充满创意的短漫剧组，致力于通过精彩的短漫作品，
+              传递情感、讲述故事、启发思考。融合火山引擎的技术力量，
+              我们将为您带来前所未有的短漫体验。
+            </p>
+            <div class="hero-actions">
+              <button id="counter" class="btn btn-primary btn-lg">
+                <i class="fas fa-play-circle"></i>
+                浏览作品
+              </button>
+              <button class="btn btn-outline btn-lg">
+                <i class="fas fa-info-circle"></i>
+                了解我们
+              </button>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number" id="count">0</span>
+                <span class="stat-label">作品数</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10k+</span>
+                <span class="stat-label">粉丝</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2026</span>
+                <span class="stat-label">成立年份</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-image">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=colorful%20comic%20studio%20with%20artists%20working%20on%20digital%20comics%20vibrant%20colors%20creative%20atmosphere&image_size=landscape_16_9" alt="火山短漫剧组" />
+            </div>
+            <div class="hero-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="features">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">代表作</h2>
+            <p class="section-description">
+              这里展示了我们剧组的一些代表性作品，每一部作品都凝聚了我们的创意和心血
+            </p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <h3 class="feature-title">《城市之光》</h3>
+              <p class="feature-description">
+                讲述了一个普通快递员在城市中传递温暖的故事，通过细腻的情感描写，
+                展现了现代都市中的人性光辉。
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-moon"></i>
+              </div>
+              <h3 class="feature-title">《月光下的约定》</h3>
+              <p class="feature-description">
+                一段跨越时空的奇幻冒险，主角通过一本古老的日记，
+                与过去的自己建立了联系，探讨了亲情与成长的主题。
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3 class="feature-title">《星际旅行者》</h3>
+              <p class="feature-description">
+                科幻题材短漫，讲述了一群宇航员在太空中的奇妙遭遇，
+                融合了硬科幻元素和人文思考，画面震撼。
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="feature-title">《心跳瞬间》</h3>
+              <p class="feature-description">
+                青春校园题材，通过几个高中生的故事，
+                展现了青春期的懵懂、友情和初恋的美好，引起了广泛共鸣。
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-tree"></i>
+              </div>
+              <h3 class="feature-title">《森林守护者》</h3>
+              <p class="feature-description">
+                环保主题短漫，讲述了一个小女孩与森林精灵的奇妙友谊，
+                通过奇幻的故事传递环保理念，寓教于乐。
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="feature-title">《未来日记》</h3>
+              <p class="feature-description">
+                悬疑推理题材，主角获得了一本能预见未来的日记，
+                却发现自己陷入了一个巨大的阴谋中，情节跌宕起伏。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">联系我们</h2>
+            <p class="section-description">
+              如果您有任何问题或合作意向，请随时联系我们，我们期待与您的交流
+            </p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>公司地址</h3>
+                  <p>北京市海淀区火山引擎大厦</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>电子邮箱</h3>
+                  <p>contact@volcano-comics.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>联系电话</h3>
+                  <p>+86 10 1234 5678</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-container">
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="name">姓名</label>
+                  <input type="text" id="name" placeholder="请输入您的姓名" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">邮箱</label>
+                  <input type="email" id="email" placeholder="请输入您的邮箱" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">留言</label>
+                  <textarea id="message" rows="5" placeholder="请输入您的留言" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">发送留言</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <i class="fas fa-fire"></i>
+              <span>火山短漫</span>
+            </div>
+            <p>创意无限，短漫精彩</p>
+          </div>
+          <div class="footer-links">
+            <h3>快速链接</h3>
+            <ul>
+              <li><a href="#home">首页</a></li>
+              <li><a href="#works">代表作</a></li>
+              <li><a href="about.html">关于我们</a></li>
+              <li><a href="#contact">联系我们</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>关注我们</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-weixin"></i></a>
+              <a href="#"><i class="fab fa-weibo"></i></a>
+              <a href="#"><i class="fab fa-douyin"></i></a>
+              <a href="#"><i class="fab fa-bilibili"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 火山短漫. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
