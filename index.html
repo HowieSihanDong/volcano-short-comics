@@ -8,257 +8,562 @@
     <meta name="keywords" content="短漫, 火山引擎, 创意, 动画, 漫画, 剧组" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>火山短漫 - 创意无限，短漫精彩</title>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav class="navbar">
-          <div class="logo">
-            <a href="#">
-              <i class="fas fa-fire"></i>
-              <span>火山短漫</span>
-            </a>
-          </div>
-          <ul class="nav-links">
-            <li><a href="#home">首页</a></li>
-            <li><a href="#works">代表作</a></li>
-            <li><a href="about.html">关于我们</a></li>
-            <li><a href="#contact">联系我们</a></li>
-          </ul>
-          <div class="nav-actions">
-            <button class="btn btn-outline">加入我们</button>
-            <button class="btn btn-primary">合作咨询</button>
-          </div>
-          <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-          </button>
-        </nav>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <svg viewBox="0 0 100 100" class="loading-logo-svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#2997ff" stroke-width="2" class="loading-circle"/>
+            <path d="M50 20 L50 50 L70 60" fill="none" stroke="#2997ff" stroke-width="3" stroke-linecap="round" class="loading-icon"/>
+          </svg>
+        </div>
+        <div class="loading-text">
+          <span class="loading-char">火</span>
+          <span class="loading-char">山</span>
+          <span class="loading-char">短</span>
+          <span class="loading-char">漫</span>
+        </div>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
       </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor">
+      <div class="cursor-dot"></div>
+      <div class="cursor-circle"></div>
+      <div class="cursor-text"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+      <div class="header-backdrop"></div>
+      <nav class="nav">
+        <a href="#" class="nav-logo magnetic-element">
+          <span class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </span>
+          <span class="logo-text">火山短漫</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="#hero" class="nav-link magnetic-element" data-text="首页">
+            <span class="nav-link-text">首页</span>
+          </a>
+          <a href="#works" class="nav-link magnetic-element" data-text="作品">
+            <span class="nav-link-text">作品</span>
+          </a>
+          <a href="#about" class="nav-link magnetic-element" data-text="关于">
+            <span class="nav-link-text">关于</span>
+          </a>
+          <a href="#contact" class="nav-link magnetic-element" data-text="联系">
+            <span class="nav-link-text">联系</span>
+          </a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="nav-cta magnetic-element">
+            <span class="cta-text">开始合作</span>
+            <span class="cta-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </span>
+          </button>
+          <button class="menu-toggle magnetic-element">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-title">
-              <span class="hero-title-primary">火山短漫</span>
-              <span class="hero-title-secondary">创意无限，短漫精彩</span>
-            </h1>
-            <p class="hero-description">
-              我们是一支充满创意的短漫剧组，致力于通过精彩的短漫作品，
-              传递情感、讲述故事、启发思考。融合火山引擎的技术力量，
-              我们将为您带来前所未有的短漫体验。
-            </p>
-            <div class="hero-actions">
-              <button id="counter" class="btn btn-primary btn-lg">
-                <i class="fas fa-play-circle"></i>
-                浏览作品
-              </button>
-              <button class="btn btn-outline btn-lg">
-                <i class="fas fa-info-circle"></i>
-                了解我们
-              </button>
+    <!-- Fullscreen Menu -->
+    <div class="fullscreen-menu">
+      <div class="menu-backdrop"></div>
+      <div class="menu-content">
+        <nav class="menu-nav">
+          <a href="#hero" class="menu-link" data-index="01">
+            <span class="menu-link-number">01</span>
+            <span class="menu-link-text">首页</span>
+          </a>
+          <a href="#works" class="menu-link" data-index="02">
+            <span class="menu-link-number">02</span>
+            <span class="menu-link-text">作品</span>
+          </a>
+          <a href="#about" class="menu-link" data-index="03">
+            <span class="menu-link-number">03</span>
+            <span class="menu-link-text">关于</span>
+          </a>
+          <a href="#contact" class="menu-link" data-index="04">
+            <span class="menu-link-number">04</span>
+            <span class="menu-link-text">联系</span>
+          </a>
+        </nav>
+        <div class="menu-footer">
+          <div class="menu-social">
+            <a href="#" class="social-link">微博</a>
+            <a href="#" class="social-link">微信</a>
+            <a href="#" class="social-link">B站</a>
+          </div>
+          <p class="menu-copyright">© 2026 火山短漫</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <canvas class="hero-canvas"></canvas>
+        <div class="hero-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">创意短漫工作室</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="title-line">
+              <span class="title-word">火山</span>
+            </span>
+            <span class="title-line">
+              <span class="title-word">短漫</span>
+            </span>
+          </h1>
+          <p class="hero-description">
+            <span class="desc-line">我们是一支充满创意的短漫剧组，</span>
+            <span class="desc-line">致力于通过精彩的短漫作品，</span>
+            <span class="desc-line">传递情感、讲述故事、启发思考。</span>
+          </p>
+          <div class="hero-actions">
+            <a href="#works" class="hero-btn hero-btn-primary magnetic-element">
+              <span class="btn-text">浏览作品</span>
+              <span class="btn-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+            <a href="#about" class="hero-btn hero-btn-secondary magnetic-element">
+              <span class="btn-text">了解更多</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-scroll">
+          <div class="scroll-indicator">
+            <span class="scroll-text">滚动探索</span>
+            <div class="scroll-line">
+              <div class="scroll-progress"></div>
             </div>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <span class="stat-number" id="count">0</span>
-                <span class="stat-label">作品数</span>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item" data-value="50">
+            <span class="stat-number">0</span>
+            <span class="stat-suffix">+</span>
+            <span class="stat-label">原创作品</span>
+          </div>
+          <div class="stat-item" data-value="100">
+            <span class="stat-number">0</span>
+            <span class="stat-suffix">K+</span>
+            <span class="stat-label">忠实粉丝</span>
+          </div>
+          <div class="stat-item" data-value="15">
+            <span class="stat-number">0</span>
+            <span class="stat-suffix">+</span>
+            <span class="stat-label">行业奖项</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works Section - Horizontal Scroll -->
+      <section id="works" class="works">
+        <div class="works-pin">
+          <div class="works-header">
+            <div class="container">
+              <span class="section-eyebrow">精选作品</span>
+              <h2 class="section-title">
+                <span class="title-reveal">代表作</span>
+              </h2>
+              <p class="section-description">每一部作品都凝聚了我们的创意和心血</p>
+            </div>
+          </div>
+          <div class="works-wrapper">
+            <div class="works-track">
+            <div class="work-card" data-index="01">
+              <div class="work-image">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" alt="城市之光">
+                <div class="work-overlay"></div>
               </div>
-              <div class="stat-item">
-                <span class="stat-number">10k+</span>
-                <span class="stat-label">粉丝</span>
+              <div class="work-content">
+                <span class="work-number">01</span>
+                <h3 class="work-title">城市之光</h3>
+                <p class="work-description">讲述了一个普通快递员在城市中传递温暖的故事</p>
+                <div class="work-tags">
+                  <span class="work-tag">温情</span>
+                  <span class="work-tag">都市</span>
+                </div>
               </div>
-              <div class="stat-item">
-                <span class="stat-number">2026</span>
-                <span class="stat-label">成立年份</span>
+            </div>
+            <div class="work-card" data-index="02">
+              <div class="work-image">
+                <img src="https://images.unsplash.com/photo-1634017839464-5c339ez0c3c0?w=800&q=80" alt="月光下的约定">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-number">02</span>
+                <h3 class="work-title">月光下的约定</h3>
+                <p class="work-description">一段跨越时空的奇幻冒险，探讨亲情与成长</p>
+                <div class="work-tags">
+                  <span class="work-tag">奇幻</span>
+                  <span class="work-tag">冒险</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-card" data-index="03">
+              <div class="work-image">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80" alt="星际旅行者">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-number">03</span>
+                <h3 class="work-title">星际旅行者</h3>
+                <p class="work-description">科幻题材短漫，融合硬科幻元素和人文思考</p>
+                <div class="work-tags">
+                  <span class="work-tag">科幻</span>
+                  <span class="work-tag">太空</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-card" data-index="04">
+              <div class="work-image">
+                <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80" alt="心跳瞬间">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-number">04</span>
+                <h3 class="work-title">心跳瞬间</h3>
+                <p class="work-description">青春校园题材，展现青春期的懵懂与美好</p>
+                <div class="work-tags">
+                  <span class="work-tag">青春</span>
+                  <span class="work-tag">校园</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-card" data-index="05">
+              <div class="work-image">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80" alt="森林守护者">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-number">05</span>
+                <h3 class="work-title">森林守护者</h3>
+                <p class="work-description">环保主题短漫，传递环保理念，寓教于乐</p>
+                <div class="work-tags">
+                  <span class="work-tag">环保</span>
+                  <span class="work-tag">奇幻</span>
+                </div>
+              </div>
               </div>
             </div>
           </div>
-          <div class="hero-visual">
-            <div class="hero-image">
-              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=colorful%20comic%20studio%20with%20artists%20working%20on%20digital%20comics%20vibrant%20colors%20creative%20atmosphere&image_size=landscape_16_9" alt="火山短漫剧组" />
-            </div>
-            <div class="hero-shapes">
-              <div class="shape shape-1"></div>
-              <div class="shape shape-2"></div>
-              <div class="shape shape-3"></div>
+          <div class="works-progress">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="works" class="features">
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="about-background">
+          <div class="about-shape about-shape-1"></div>
+          <div class="about-shape about-shape-2"></div>
+        </div>
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <span class="section-eyebrow">关于我们</span>
+              <h2 class="section-title about-title">
+                <span class="title-reveal">创意驱动</span>
+                <span class="title-reveal">故事为王</span>
+              </h2>
+              <div class="about-text">
+                <p class="text-reveal">我们是一支充满激情的创意团队，专注于短漫创作。通过独特的视觉语言和深刻的故事内涵，我们致力于为观众带来触动人心的作品。</p>
+                <p class="text-reveal">每一个故事都经过精心打磨，每一帧画面都追求极致。我们相信，好的故事能够跨越语言和文化的界限，触动每一个人的心灵。</p>
+              </div>
+              <div class="about-features">
+                <div class="about-feature">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <div class="feature-info">
+                    <h4>原创故事</h4>
+                    <p>100%原创内容</p>
+                  </div>
+                </div>
+                <div class="about-feature">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 6v6l4 2"/>
+                    </svg>
+                  </div>
+                  <div class="feature-info">
+                    <h4>快速交付</h4>
+                    <p>高效制作流程</p>
+                  </div>
+                </div>
+                <div class="about-feature">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <div class="feature-info">
+                    <h4>专业团队</h4>
+                    <p>资深创作者</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-visual">
+              <div class="about-image-wrapper">
+                <div class="about-image">
+                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="团队协作">
+                </div>
+                <div class="about-float-card card-1">
+                  <span class="float-number">50+</span>
+                  <span class="float-label">原创作品</span>
+                </div>
+                <div class="about-float-card card-2">
+                  <span class="float-number">100K+</span>
+                  <span class="float-label">粉丝关注</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">代表作</h2>
-            <p class="section-description">
-              这里展示了我们剧组的一些代表性作品，每一部作品都凝聚了我们的创意和心血
-            </p>
+            <span class="section-eyebrow">服务内容</span>
+            <h2 class="section-title">
+              <span class="title-reveal">我们提供</span>
+            </h2>
           </div>
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-fire"></i>
+          <div class="services-grid">
+            <div class="service-card" data-service="story">
+              <div class="service-number">01</div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
               </div>
-              <h3 class="feature-title">《城市之光》</h3>
-              <p class="feature-description">
-                讲述了一个普通快递员在城市中传递温暖的故事，通过细腻的情感描写，
-                展现了现代都市中的人性光辉。
-              </p>
+              <h3 class="service-title">故事创作</h3>
+              <p class="service-description">从概念到剧本，我们提供完整的故事创作服务，打造引人入胜的叙事体验。</p>
+              <div class="service-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-moon"></i>
+            <div class="service-card" data-service="art">
+              <div class="service-number">02</div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                  <path d="M2 2l7.586 7.586"/>
+                  <circle cx="11" cy="11" r="2"/>
+                </svg>
               </div>
-              <h3 class="feature-title">《月光下的约定》</h3>
-              <p class="feature-description">
-                一段跨越时空的奇幻冒险，主角通过一本古老的日记，
-                与过去的自己建立了联系，探讨了亲情与成长的主题。
-              </p>
+              <h3 class="service-title">美术设计</h3>
+              <p class="service-description">专业的视觉设计团队，为每个故事创造独特的视觉风格和角色形象。</p>
+              <div class="service-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-star"></i>
+            <div class="service-card" data-service="animation">
+              <div class="service-number">03</div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
               </div>
-              <h3 class="feature-title">《星际旅行者》</h3>
-              <p class="feature-description">
-                科幻题材短漫，讲述了一群宇航员在太空中的奇妙遭遇，
-                融合了硬科幻元素和人文思考，画面震撼。
-              </p>
+              <h3 class="service-title">动画制作</h3>
+              <p class="service-description">从分镜到成片，全流程动画制作服务，让静态画面生动起来。</p>
+              <div class="service-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-heart"></i>
+            <div class="service-card" data-service="brand">
+              <div class="service-number">04</div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
               </div>
-              <h3 class="feature-title">《心跳瞬间》</h3>
-              <p class="feature-description">
-                青春校园题材，通过几个高中生的故事，
-                展现了青春期的懵懂、友情和初恋的美好，引起了广泛共鸣。
-              </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-tree"></i>
+              <h3 class="service-title">品牌合作</h3>
+              <p class="service-description">定制化品牌内容创作，通过短漫形式传递品牌价值，触达目标受众。</p>
+              <div class="service-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
               </div>
-              <h3 class="feature-title">《森林守护者》</h3>
-              <p class="feature-description">
-                环保主题短漫，讲述了一个小女孩与森林精灵的奇妙友谊，
-                通过奇幻的故事传递环保理念，寓教于乐。
-              </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-rocket"></i>
-              </div>
-              <h3 class="feature-title">《未来日记》</h3>
-              <p class="feature-description">
-                悬疑推理题材，主角获得了一本能预见未来的日记，
-                却发现自己陷入了一个巨大的阴谋中，情节跌宕起伏。
-              </p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Contact Section -->
       <section id="contact" class="contact">
+        <div class="contact-background">
+          <div class="contact-gradient"></div>
+        </div>
         <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">联系我们</h2>
-            <p class="section-description">
-              如果您有任何问题或合作意向，请随时联系我们，我们期待与您的交流
-            </p>
-          </div>
-          <div class="contact-content">
-            <div class="contact-info">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
+          <div class="contact-grid">
+            <div class="contact-content">
+              <span class="section-eyebrow">联系我们</span>
+              <h2 class="section-title contact-title">
+                <span class="title-reveal">开始您的</span>
+                <span class="title-reveal">创意之旅</span>
+              </h2>
+              <p class="contact-description">无论您有任何问题或合作意向，我们都期待与您的交流。</p>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="contact-label">邮箱</span>
+                    <a href="mailto:hello@volcano.com" class="contact-link">hello@volcano.com</a>
+                  </div>
                 </div>
-                <div class="contact-details">
-                  <h3>公司地址</h3>
-                  <p>北京市海淀区火山引擎大厦</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>电子邮箱</h3>
-                  <p>contact@volcano-comics.com</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>联系电话</h3>
-                  <p>+86 10 1234 5678</p>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="contact-label">地址</span>
+                    <span class="contact-value">北京市朝阳区创意产业园</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="contact-form-container">
-              <form class="contact-form">
+            <div class="contact-form-wrapper">
+              <form class="contact-form" id="contactForm">
                 <div class="form-group">
-                  <label for="name">姓名</label>
-                  <input type="text" id="name" placeholder="请输入您的姓名" required>
+                  <input type="text" id="name" required placeholder=" ">
+                  <label for="name">您的姓名</label>
+                  <div class="form-line"></div>
                 </div>
                 <div class="form-group">
-                  <label for="email">邮箱</label>
-                  <input type="email" id="email" placeholder="请输入您的邮箱" required>
+                  <input type="email" id="email" required placeholder=" ">
+                  <label for="email">电子邮箱</label>
+                  <div class="form-line"></div>
                 </div>
                 <div class="form-group">
-                  <label for="message">留言</label>
-                  <textarea id="message" rows="5" placeholder="请输入您的留言" required></textarea>
+                  <textarea id="message" rows="4" required placeholder=" "></textarea>
+                  <label for="message">项目描述</label>
+                  <div class="form-line"></div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">发送留言</button>
+                <button type="submit" class="submit-btn magnetic-element">
+                  <span class="btn-text">发送消息</span>
+                  <span class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"/>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                  </span>
+                </button>
               </form>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a href="#" class="footer-logo">
+                <span class="logo-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                  </svg>
+                </span>
+                <span class="logo-text">火山短漫</span>
+              </a>
+              <p class="footer-tagline">创意无限，短漫精彩</p>
+            </div>
+            <div class="footer-links">
+              <div class="footer-column">
+                <h4>导航</h4>
+                <a href="#hero">首页</a>
+                <a href="#works">作品</a>
+                <a href="#about">关于</a>
+                <a href="#contact">联系</a>
+              </div>
+              <div class="footer-column">
+                <h4>服务</h4>
+                <a href="#services">故事创作</a>
+                <a href="#services">美术设计</a>
+                <a href="#services">动画制作</a>
+                <a href="#services">品牌合作</a>
+              </div>
+              <div class="footer-column">
+                <h4>社交</h4>
+                <a href="#">微博</a>
+                <a href="#">微信</a>
+                <a href="#">B站</a>
+                <a href="#">抖音</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="copyright">© 2026 火山短漫. All rights reserved.</p>
+            <button class="back-to-top magnetic-element">
+              <span>回到顶部</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 15l-6-6-6 6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="logo">
-              <i class="fas fa-fire"></i>
-              <span>火山短漫</span>
-            </div>
-            <p>创意无限，短漫精彩</p>
-          </div>
-          <div class="footer-links">
-            <h3>快速链接</h3>
-            <ul>
-              <li><a href="#home">首页</a></li>
-              <li><a href="#works">代表作</a></li>
-              <li><a href="about.html">关于我们</a></li>
-              <li><a href="#contact">联系我们</a></li>
-            </ul>
-          </div>
-          <div class="footer-social">
-            <h3>关注我们</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-weixin"></i></a>
-              <a href="#"><i class="fab fa-weibo"></i></a>
-              <a href="#"><i class="fab fa-douyin"></i></a>
-              <a href="#"><i class="fab fa-bilibili"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 火山短漫. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
